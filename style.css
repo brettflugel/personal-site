@@ -232,3 +232,133 @@ h1 {
 .about-content a:hover {
   text-decoration: underline;
 }
+
+/* Contact page styles */
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.contact-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  color: #666;
+}
+
+.contact-info {
+  margin: 2rem 0;
+}
+
+.contact-info p {
+  margin: 1rem 0;
+}
+
+.social-links {
+  margin-top: 3rem;
+}
+
+.social-links h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.social-link:hover {
+  background: #333;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-content {
+    padding: 1rem;
+  }
+  
+  .contact-content h2 {
+    font-size: 2rem;
+  }
+  
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    width: 200px;
+    justify-content: center;
+  }
+}
+
+/* Blog page styles */
+.blog-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.blog-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.coming-soon {
+  font-size: 1.5rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-content {
+    padding: 1rem;
+  }
+  
+  .blog-content h2 {
+    font-size: 2rem;
+  }
+  
+  .coming-soon {
+    font-size: 1.3rem;
+  }
+}
