@@ -30,15 +30,32 @@ nav ul {
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   width: 100%;
+  padding: 2rem;
 }
 
 .column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .column {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  body {
+    font-size: 14px;
+  }
 }
