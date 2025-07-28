@@ -37,4 +37,32 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         }
     });
+
+    // Skills progress bar animation
+    function animateSkillBars() {
+        const skillProgressBars = document.querySelectorAll('.skill-progress');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target;
+                    const percentage = progressBar.getAttribute('data-percentage');
+                    
+                    progressBar.style.setProperty('--target-width', percentage + '%');
+                    progressBar.classList.add('animate');
+                    
+                    observer.unobserve(progressBar);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        skillProgressBars.forEach(bar => {
+            observer.observe(bar);
+        });
+    }
+
+    // Initialize skills animation
+    animateSkillBars();
 });
