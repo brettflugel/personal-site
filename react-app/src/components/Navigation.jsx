@@ -10,6 +10,9 @@ function Navigation() {
   }
 
   const isActive = (path) => {
+    if (path === '/blog') {
+      return location.pathname === '/blog' || location.pathname.startsWith('/blog/')
+    }
     return location.pathname === path
   }
 
