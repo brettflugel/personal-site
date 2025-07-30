@@ -112,7 +112,7 @@ h1 {
 .content {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .row {
@@ -168,6 +168,23 @@ section {
 section:last-child {
   border-bottom: none;
   margin-bottom: 0;
+}
+
+/* List styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  color: #555;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+ul li:last-child {
+  border-bottom: none;
 }
 
 /* Skills section styles */
@@ -282,7 +299,7 @@ section:last-child {
   }
 
   .content {
-    padding: 0 1rem;
+    padding: 0 1rem 2rem 1rem;
   }
   
   .row {
@@ -301,11 +318,22 @@ section:last-child {
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
+    margin: 1rem 0;
   }
 
-  body {
-    font-size: 14px;
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.8rem 0 1.5rem 0;
   }
 }
 
@@ -352,11 +380,19 @@ section:last-child {
 }
 
 .contact-info {
-  margin: 2rem 0;
+  margin: 3rem 0;
+  text-align: center;
 }
 
 .contact-info p {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.contact-info strong {
+  color: #333;
+  font-weight: 600;
 }
 
 /* Blog page styles */
@@ -378,4 +414,64 @@ section:last-child {
   color: #888;
   font-style: italic;
   margin-top: 3rem;
+}
+
+/* Social Links Styles */
+.social-links {
+  margin-top: 3rem;
+}
+
+.social-links h3 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.social-link:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  color: #333;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Mobile adjustments for social links */
+@media screen and (max-width: 768px) {
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .social-link {
+    min-width: 150px;
+  }
 }
