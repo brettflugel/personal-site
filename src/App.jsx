@@ -10,7 +10,7 @@ import './styles.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/personal-site">
       <div className="App">
         <Header />
         <Navigation />
